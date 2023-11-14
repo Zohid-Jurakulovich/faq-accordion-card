@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 html {
   height: 100%;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 *,
@@ -28,10 +30,12 @@ body {
   font-family: 'Outfit' ,'Arial', 'sans-serif';
   margin: 0;
   padding: 0;
+  background: linear-gradient(#B068E9, #6463E7);
+
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
   vertical-align: middle;
   object-fit: cover;
@@ -53,4 +57,53 @@ img {
   margin: 0 auto;
   padding: 0 20px;
   color: #B068E9, #6463E7;
+}
+
+.component{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 920px;
+  width: 100% ;
+  background-color: #fff;
+}
+
+
+.component__img{
+  max-width: 534px;
+  max-height: 382px;
+}
+
+.questions{
+max-width: 350px;
+width: 100%;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  /* width: 100%; */
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
