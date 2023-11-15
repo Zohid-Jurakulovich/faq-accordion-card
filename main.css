@@ -27,11 +27,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Outfit' ,'Arial', 'sans-serif';
+  font-family: 'Kumbh Sans' ,'Arial', 'sans-serif';
   margin: 0;
   padding: 0;
   background: linear-gradient(#B068E9, #6463E7);
-
+  
 }
 
 img {
@@ -63,47 +63,111 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 920px;
+  max-width: 825px;
   width: 100% ;
+  padding: 65px 95px 83px 0;
   background-color: #fff;
+  border-radius: 15px;
 }
 
 
 .component__img{
-  max-width: 534px;
-  max-height: 382px;
+  /* width: 471px; */
+  /* height: 359px; */
+  /* max-width: 471px; */
+  /* max-height: 400px; */
+  /* width: 100%; */
+  margin-right: 87px;
 }
 
 .questions{
-max-width: 350px;
-width: 100%;
+  max-width: 350px;
+  width: 100%;
+}
+
+.title{
+  /* font-family: Kumbh Sans; */
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0 0 25px 0;
+}
+
+.questions__box{
+  max-width: 350px;
+  width: 100%;
+  padding: 18px 0;
+  border-bottom: 1px solid #E8E8EA;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: #eee;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
   color: #444;
   cursor: pointer;
-  padding: 18px;
-  /* width: 100%; */
+  padding: 0;
+  width: 100%;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
+  
+  transition:all 1s ease;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion::after{
+  content: "";
+  position: absolute;
+  z-index: 2;
+  background-image: url(./images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 7px;
+  top: 25%;
+  right: 7px;
+  
+}
+
+.active::after{
+  content: "";
+  background-image: url(./images/icon-arrow-top.svg);
+  }
+
 .active, .accordion:hover {
-  background-color: #ccc;
+  color: #F47B56;
 }
 
+.active, .accordion:active{
+  font-weight: 700;
+  color: #1E1F36;
+  margin-bottom: 13px;
+  
+}
 
-
-/* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 0 18px;
+  /* padding: 0 18px; */
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.panel__content{
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #787887;
 }
